@@ -1,0 +1,32 @@
+<head>
+  <title>Github API Test</title>
+</head>
+
+<body>
+  <h1>Github API Test with Meteor</h1>
+
+  <h2>Get README.md from any repository</h2>
+
+  {{> selector}}
+
+  {{> hello}}
+
+</body>
+
+<template name="hello">
+  <div id="demo"></div>
+  <div id="demo1"></div>
+  <div id="demo2"></div>
+</template>
+
+<template name="selector">
+    <div>
+        <label for="getRepo">Repository and user select</label>
+            <form id="getRepo">
+                <p>Select Github user: <input type="string" name="user" placeholder="Github username"></p>
+                <p>Select repository <input type="string" name="repo" placeholder="User repository"></p>
+                <p>Select branch <input type="string" name="branch" placeholder="Repository branch"></p>
+            </form>
+            <button type="submit" form="getRepo" value="submit">Get Repository Info</button>
+    </div>
+</template>
